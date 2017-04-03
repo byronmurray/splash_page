@@ -51,7 +51,8 @@ add_filter( 'woocommerce_get_order_item_totals', 'adjust_woocommerce_get_order_i
 add_action( 'woocommerce_single_product_summary', 'return_policy', 20 );
 
 
-get_template_part( 'functions/slider' );
+get_template_part( 'functions/custom_posts' );
+
 
 
 get_template_part( 'functions/widgets' );

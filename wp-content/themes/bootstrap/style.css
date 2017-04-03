@@ -13,6 +13,20 @@ Text Domain: dubzz.co.nz
 
 */
 
+/* scroll nav */
+
+.scroll-nav {
+  transition: background-color 0.7s ease;
+  background-color: white;
+
+  border-bottom: 1px solid black;
+}
+
+.scroll-nav .container .navbar-brand, .scroll-nav .container .navbar-brand:hover, .scroll-nav .nav > li > a {
+  transition: color 0.7s ease;
+  color: black;
+}
+
 /*
 Max content widths
 */
