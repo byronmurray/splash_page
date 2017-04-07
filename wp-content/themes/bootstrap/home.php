@@ -6,7 +6,7 @@
 
   	<div class="container"> 
   		<h1><?php wp_title(''); ?></h1>
-	</div>
+	  </div>
 
   </div>
 
@@ -28,7 +28,25 @@
            
           if ($custom_query->have_posts() ) : while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
-            <?php get_template_part( 'inc/loop', 'blog' ); ?>
+            <article class="post">
+              <div class=" text-center">
+
+                <?php the_category( ', ' ); ?>
+                <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+                <p><em><?php echo the_time('l, F jS, Y');?></em></p>
+
+              </div>
+              
+
+              <?php the_post_thumbnail('blog_featured' ); ?>            
+
+              <?php the_excerpt(); ?>
+
+              <a class="btn btn-primary"> href="<?php the_permalink(); ?>">Read More</a>
+
+              <hr>
+
+            </article>
          
           <?php endwhile; ?>
         <!-- End of the main loop -->

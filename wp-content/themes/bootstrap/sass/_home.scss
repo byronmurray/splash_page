@@ -1,0 +1,17 @@
+.rounded-circle {
+  border-radius: 50%;
+  background: black;
+}
+
+.contact-container {
+  background: url(http://www.apimages.com/Images/AP970870282113.jpg) no-repeat;
+  background-size: auto auto;
+  background-size: cover;
+  color: #fff;
+}
+
+
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: unset;
+}

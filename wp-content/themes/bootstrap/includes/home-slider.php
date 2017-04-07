@@ -30,7 +30,7 @@ this may be better as a function then we can pass in the var for the args
 
           <p>
             <a href="#" class="btn btn-primary">Main call to action</a>
-            <a href="#" class="btn btn-secondary">Secondary action</a>
+            <a href="#" class="btn btn-default">Secondary action</a>
           </p>
 
         </div>

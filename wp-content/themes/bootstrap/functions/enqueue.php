@@ -2,7 +2,7 @@
 
 /*enqueue styles*/
 function theme_styles() {
-	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/sass/app.min.css' );
+	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/css/app.css' );
 }
 
 

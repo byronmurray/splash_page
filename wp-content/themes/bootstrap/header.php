@@ -31,7 +31,8 @@
       
         <?php
             wp_nav_menu( array(
-                'theme_location'    => 'navbar-right',
+                'menu'              => 'primary',
+                'theme_location'    => 'primary',
                 'depth'             => 2,
                 'menu_class'        => 'nav navbar-nav navbar-right',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
@@ -62,5 +63,4 @@ Site Title
   background: url(../img/logo.png) 0 0 no-repeat;
 }
 -->
-
 

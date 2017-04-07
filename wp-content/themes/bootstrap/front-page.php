@@ -5,25 +5,38 @@
 
 <div class="container text-center padding">
 
-  <h2>Welcome to <span style="color: green">My website</span></h2>
-  <p>Here at Nelson Bays Property Management, your investment is treated like it’s our own. Taking charge of full property management services to investors and property owners, partnership is guaranteed, maximising the return on investment through efficient performance. With combined extensive knowledge on local markets and customized marketing strategies, values are maximized and risks are minimised, thus promoting long-term sustainable tenancy</p>
+  <h2>Welcome to <span>My website</span></h2>
+  <p class="lead">Here at Nelson Bays Property Management, your investment is treated like it’s our own. Taking charge of full property management services to investors and property owners, partnership is guaranteed, maximising the return on investment through efficient performance. With combined extensive knowledge on local markets and customized marketing strategies, values are maximized and risks are minimised, thus promoting long-term sustainable tenancy</p>
 
 
 </div><!-- Container-fluid end -->
 
 <div class="container padding">
 
-  <div class="row">
-    
-    <!-- call to actions -->
-      <div class="col-md-4"><img src="<?php echo get_template_directory_uri() ?>/images/tiles/coffee-cup-mug-cafe.jpg" alt=""><h2>header</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p></div>
-      <div class="col-md-4"><img src="<?php echo get_template_directory_uri() ?>/images/tiles/coffee-cup-mug-cafe.jpg" alt=""><h2>header</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p></div>
-      <div class="col-md-4"><img src="<?php echo get_template_directory_uri() ?>/images/tiles/coffee-cup-mug-cafe.jpg" alt=""><h2>header</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p></div>
+  <div class="flex">
 
-  </div><!-- .row -->
+    <div>
+      <img src="<?php echo get_template_directory_uri() ?>/images/tiles/coffee-cup-mug-cafe.jpg" alt="">
+      <h2>header</h2>
+      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+    </div>
 
+    <div>
+      <img src="<?php echo get_template_directory_uri() ?>/images/tiles/coffee-cup-mug-cafe.jpg" alt="">
+      <h2>header</h2>
+      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+    </div>
 
-</div><!-- Container-fluid end -->
+    <div>
+      <img src="<?php echo get_template_directory_uri() ?>/images/tiles/coffee-cup-mug-cafe.jpg" alt="">
+      <h2>header</h2>
+      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+    </div>
+
+  </div>
+  
+</div>
+
 
 
 
@@ -35,9 +48,9 @@
 
 <?php $i = 0; if ($loop->have_posts()) : ?>
 
-<div class="container text-center padding">
+<div class="container text-center">
   
-  <h2>Meet the <span style="color: green;">Team</span></h2>
+  <h2>Meet the <span>Team</span></h2>
   
   <div class="row">
 
@@ -61,14 +74,37 @@
 
 <div class="container-fluid padding" style="background: url(<?php echo get_template_directory_uri() ?>/images/background/coffee-cup-desk-pen.jpg); color: white;">
 
-  <h2 class="text-center">Get in <span style="color: green;">Touch</span></h2>
+  <h2 class="text-center">Get in <span>Touch</span></h2>
   
   <div class="container">
     <div class="col-md-6">
       
     </div>
     <div class="col-md-6">
-      <?php echo do_shortcode('[contact-form-7 id="9" title="Contact form 1"]') ?>
+
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Provide your email address">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Phone</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter a contact phone number">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Message</label>
+          <textarea name="" id="" class="form-control" cols="30" rows="10" placeholder="What do you want?"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
     
   </div>
@@ -85,7 +121,7 @@
 
   <div class="container padding">
 
-    <h2 class="text-center">What our clients are <span style="color: green;">Saying</span></h2>
+    <h2 class="text-center">What our clients are <span>Saying</span></h2>
     
     
 

@@ -3,29 +3,33 @@
 function get_excerpt($limit, $source = null){
 
     if($source == "content" ? ($excerpt = get_the_content()) : ($excerpt = get_the_excerpt()));
-    $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
-    $excerpt = strip_shortcodes($excerpt);
-    $excerpt = strip_tags($excerpt);
-    $excerpt = substr($excerpt, 0, $limit);
-    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-    $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
-    $excerpt = $excerpt.'...';
+        $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+        $excerpt = strip_shortcodes($excerpt);
+        $excerpt = strip_tags($excerpt);
+        $excerpt = substr($excerpt, 0, $limit);
+        $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+        $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+        $excerpt = $excerpt.'...';
+
     return $excerpt;
 }
 
-function get_hero_image($page = "") {
-   if (get_the_post_thumbnail() && $page != "shop") {
-    echo '<div class="page--header-image" style="background-image: url(';
-    the_post_thumbnail_url('full');
-    echo ');" ></div>';
-  } else {
-    echo '<div class="page--header-image" style="background-image: url(';
-    echo get_template_directory_uri() . '/images/hero/hero-' . rand(1,6) .'.jpg);"></div>';
-  }
+function get_hero_image() {
+
+    if (get_the_post_thumbnail()) {
+        echo '<div class="hero-image" style="background-image: url(';
+        the_post_thumbnail_url('full');
+        echo ');" ></div>';
+    } else {
+        echo '<div class="hero-image" style="background-image: url(';
+        echo get_template_directory_uri() . '/images/hero/hero-' . rand(1,6) .'.jpg);"></div>';
+    }
+
 }
 
 
 function featured_posts ($offset) {
+
 
 	$the_query = new WP_Query( [
 
@@ -48,20 +52,21 @@ function featured_posts ($offset) {
 			echo ' in '; 
 			the_category( ', ' );
 			echo '</em></p>';           
-
 			echo get_excerpt(300); 
-
 			echo '<p><a class="btn btn-sm btn-danger" href="' . get_the_permalink() .'" role="button">Read More</a></p>';
 
 		}
 	}
 
+    wp_reset_query();
+
 }
 
 
 function featured_gallery ($offset, $num_posts, $orderby = '') {
+	
 
-	$custom_query = new WP_Query( array( 'post_type' => 'gallery', 'offset' => $offset, 'posts_per_page' => $num_posts, 'orderby' => $orderby, 'order' => 'ASC' ) ); 
+    $custom_query = new WP_Query( array( 'post_type' => 'gallery', 'offset' => $offset, 'posts_per_page' => $num_posts, 'orderby' => $orderby, 'order' => 'ASC' ) ); 
 
     if ($custom_query->have_posts() ) {
     	while($custom_query->have_posts() ) {
@@ -83,8 +88,13 @@ function featured_gallery ($offset, $num_posts, $orderby = '') {
              
     	}
 	}
+
+    wp_reset_query();
 }
 
+
+add_image_size( 'blog_featured', 750, 500, array( 'center', 'center' ) );
+add_image_size( 'hero_image', 1900, 300, array( 'center', 'center' ) );
 
 
 
