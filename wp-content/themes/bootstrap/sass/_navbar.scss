@@ -9,6 +9,10 @@
   color: #000;
 }
 
+.navbar-container {
+  position: relative;
+}
+
 .nav > li > a,
 .container .navbar-brand {
     color: $brand-primary;
@@ -20,4 +24,19 @@
 .container .navbar-brand:hover {
     color: #fff;
 }
+
+.navbar-brand img {
+    width: 110px;
+}
+
+.navbar {
+    min-height: 74px;
+}
+
+.navbar-right {
+    position: relative;
+    top: 30px;
+}
+
+
 

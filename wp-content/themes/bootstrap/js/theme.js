@@ -18,5 +18,18 @@ jQuery.noConflict();
 		});
 
 
+
+		/*styles to min height for home page*/
+		var windowHeight = $( window ).height();
+		
+		$("#featureCarousel .item").css("height", windowHeight + 'px');
+
+
+	
+	
+ 
+
+
   });
 })(jQuery);
+

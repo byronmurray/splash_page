@@ -1,6 +1,25 @@
 @import "customVariables";
+
+/* bootstrap stylesheets */
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
+
+/* font awesome */
+@import "variables";
+@import "mixins";
+@import "path";
+@import "core";
+@import "larger";
+@import "fixed-width";
+@import "list";
+@import "bordered-pulled";
+@import "animated";
+@import "rotated-flipped";
+@import "stacked";
+@import "icons";
+@import "screen-reader";
+
+/* theme custom styling */
 @import "navbar";
 @import "home";
 @import "footer";

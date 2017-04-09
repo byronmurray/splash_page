@@ -15,4 +15,12 @@ function create_widget( $name, $id, $description ) {
 }
 
 
- ?>
+create_widget( 'Page Sidebar', 'page', 'Displays on the side of pages with a sidebar' );
+create_widget( 'Blog Sidebar', 'blog', 'Displays on the side of pages in the blog section' );
+
+create_widget( 'Shop Sidebar', 'shop', 'Displays on the side of the shop pages' );
+
+create_widget( 'Footer Left' , 'foot-left' , 'Displays on left of the Footer');
+create_widget( 'Footer Center' , 'foot-center' , 'Displays on center of the Footer');
+create_widget( 'Footer Right' , 'foot-right' , 'Displays on right of the Footer');
+

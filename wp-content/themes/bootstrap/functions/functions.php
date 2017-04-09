@@ -27,9 +27,7 @@ function get_hero_image() {
 
 }
 
-
 function featured_posts ($offset) {
-
 
 	$the_query = new WP_Query( [
 
@@ -61,41 +59,6 @@ function featured_posts ($offset) {
     wp_reset_query();
 
 }
-
-
-function featured_gallery ($offset, $num_posts, $orderby = '') {
-	
-
-    $custom_query = new WP_Query( array( 'post_type' => 'gallery', 'offset' => $offset, 'posts_per_page' => $num_posts, 'orderby' => $orderby, 'order' => 'ASC' ) ); 
-
-    if ($custom_query->have_posts() ) {
-    	while($custom_query->have_posts() ) {
-
-    		$custom_query->the_post();
-
-            echo '<figure>';
-            echo '<a class="featured-gallery" href="'; 
-            echo get_the_permalink();
-            echo '">';
-            the_post_thumbnail(); 
-            echo '<figcaption>';
-            the_title();
-            echo ' <img src="';
-            bloginfo( 'url' );
-            echo '/wp-content/uploads/2017/03/background-1.png" alt=""></figcaption>';
-            echo '</figure>';
-            echo '</a>';
-             
-    	}
-	}
-
-    wp_reset_query();
-}
-
-
-add_image_size( 'blog_featured', 750, 500, array( 'center', 'center' ) );
-add_image_size( 'hero_image', 1900, 300, array( 'center', 'center' ) );
-
 
 
 

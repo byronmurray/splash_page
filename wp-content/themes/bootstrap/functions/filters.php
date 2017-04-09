@@ -1,7 +1,5 @@
 <?php 
 
-
-
 /**
  * Filter the "read more" excerpt string link to the post.
  *
@@ -11,7 +9,6 @@
 function wpdocs_excerpt_more( $more ) {
     return '... ';
 }
-
 
 // numbered pagination
 function pagination($pages = '', $range = 4) {
@@ -51,8 +48,5 @@ function pagination($pages = '', $range = 4) {
  }
 }
 
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
-
-
-
- ?>

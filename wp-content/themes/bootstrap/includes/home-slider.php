@@ -3,7 +3,7 @@
 this may be better as a function then we can pass in the var for the args
 ================================================== -->
 <section class="myCarousel-slider">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="featureCarousel" class="carousel slide" data-ride="carousel">
 
     <div class="carousel-inner" role="listbox">
 
@@ -14,14 +14,14 @@ this may be better as a function then we can pass in the var for the args
 
     <?php if ($i == 0): ?>
 
-      <div class="item active">
+      <div class="item active" style="background: url(<?php the_post_thumbnail_url('full') ?> ) no-repeat center center fixed; background-size: cover;">
 
     <?php else: ?>
 
-      <div class="item">
+      <div class="item" style="background: url(<?php the_post_thumbnail_url('full') ?>) no-repeat center center fixed; background-size: cover;">
 
     <?php endif; ?>
-        <img class="first-slide" src="<?php the_post_thumbnail_url('full') ?>" >
+        <!-- <img class="first-slide" src="<?php //the_post_thumbnail_url('full') ?>" > -->
 
         <div class="carousel-caption">
 
