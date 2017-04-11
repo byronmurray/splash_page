@@ -9,6 +9,15 @@
   <?php wp_head(); ?>
 </head>
 
+<style>
+  
+  .page-container {
+    margin-top: 60px;
+  }
+
+
+</style>
+
 <body <?php body_class(); ?>>
 
 <!--[if lt IE 8]>

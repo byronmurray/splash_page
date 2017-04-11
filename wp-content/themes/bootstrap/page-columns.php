@@ -8,16 +8,6 @@
   
   <?php get_hero_image() ?>
   
-  <div class="page-header">
-
-  	<div class="container">
-
-  		<h1><?php the_title(); ?></h1>
-      
-	  </div>
-
-  </div>
-
   <div class="container page-container">
 
     <div class="row">

@@ -1,16 +1,32 @@
 <?php get_header(); ?>
 
   <?php get_hero_image() ?>
+
+
+  <style>
+    
+    article {
+
+      box-shadow: 0 0 10px #0003;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    article > p {
+      padding: 28px;
+    }
+
+    .widget {
+      box-shadow: 0 0 10px #0003;
+      padding: 10px;
+      margin-bottom: 30px;
+
+    }
+
+  </style>
   
-  <div class="page-header">
-
-  	<div class="container"> 
-  		<h1><?php wp_title(''); ?></h1>
-	  </div>
-
-  </div>
-
-  <div class="container">   
+  <div class="container page-container">   
     <div class="row">
       
       <div class="col-md-9">
@@ -42,9 +58,7 @@
 
               <?php the_excerpt(); ?>
 
-              <a class="btn btn-primary"> href="<?php the_permalink(); ?>">Read More</a>
-
-              <hr>
+              <a class="btn btn-primary" href="<?php the_permalink(); ?>">Read More</a>
 
             </article>
          

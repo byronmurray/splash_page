@@ -17,7 +17,7 @@ function get_excerpt($limit, $source = null){
 function get_hero_image() {
 
     if (get_the_post_thumbnail()) {
-        echo '<div class="hero-image" style="background-image: url(';
+        echo '<div class="hero-image" style="height: 240px; background-image: url(';
         the_post_thumbnail_url('full');
         echo ');" ></div>';
     } else {
