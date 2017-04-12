@@ -18,3 +18,29 @@
     text-decoration: none;
     background-color: unset;
 }
+
+
+.flex {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	
+	.feature-box {
+		max-width: 500px;
+	}
+}
+
+
+@media (min-width:768px) {
+	.flex {
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-direction: row;
+
+		.feature-box {
+			max-width: unset;
+			flex-basis: 31%;
+		}		
+	}
+
+}

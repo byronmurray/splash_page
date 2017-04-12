@@ -66,9 +66,6 @@
 
 <?php endif ?>
 
-
-
-
 <div class="container-fluid container-map">
 
 <div id="map"></div>
