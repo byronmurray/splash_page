@@ -1,12 +1,38 @@
-.scroll-nav {
-  transition: background-color 0.7s ease;
-  background-color: white;
-  border-bottom: 1px solid black;
+.navbar {
+  transition: background-color 1.7s ease;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+
+  transition: min-height 1.7s ease;
+  min-height: 106px;
 }
 
-.scroll-nav .container .navbar-brand, .scroll-nav .container .navbar-brand:hover, .scroll-nav .nav > li > a {
-  transition: color 0.7s ease-in-out;
-  color: #000;
+
+
+.scroll-nav {
+  transition: background-color 1.7s ease;
+  background-color: white;
+  border-bottom: 1px solid black;
+  
+  transition: min-height 1.7s ease;
+  min-height: 75px;
+
+  .container .navbar-brand, 
+  .container .navbar-brand:hover, 
+  .nav > li > a {
+    transition: color 0.5s ease;
+    color: #000;
+  }
+  
+  li a:hover{
+    color: $brand-primary !important;
+  }
+
+  .navbar-brand img {
+    transition: width 1.7s ease;
+    width: 110px;
+  }
+
 }
 
 .navbar-container {
@@ -15,22 +41,19 @@
 
 .nav > li > a,
 .container .navbar-brand {
-    color: $brand-primary;
+    color: #fff;
     font-weight: bold;
 }
 
 .nav > li > a:focus,
 .nav > li > a:hover,
 .container .navbar-brand:hover {
-    color: #fff;
+  color: $brand-primary;
 }
 
 .navbar-brand img {
-    width: 110px;
-}
-
-.navbar {
-    min-height: 74px;
+  transition: width 1.7s ease;
+  width: 190px;
 }
 
 .navbar-right {

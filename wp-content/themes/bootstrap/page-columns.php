@@ -8,11 +8,9 @@
   
   <?php get_hero_image() ?>
   
-  <div class="container page-container">
-
-    <div class="row">
-      
-      <div class="col-md-6">
+  <div class="container flex page-container">
+     
+      <div class="columns-2">
 		
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -22,15 +20,13 @@
 
       </div>
 
-      <div class="col-md-6">
-      
-      	<?php echo get_post_meta($post->ID,'custom_wysiwyg', true); ?>
+      <div class="columns-2">
+     
+        <?php display_meta_box(); ?>
  
   	  </div>
-
-    </div>
-
 
   </div>
 
 <?php get_footer(); ?>
+

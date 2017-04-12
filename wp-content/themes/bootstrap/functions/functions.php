@@ -16,14 +16,8 @@ function get_excerpt($limit, $source = null){
 
 function get_hero_image() {
 
-    if (get_the_post_thumbnail()) {
-        echo '<div class="hero-image" style="height: 240px; background-image: url(';
-        the_post_thumbnail_url('full');
-        echo ');" ></div>';
-    } else {
-        echo '<div class="hero-image" style="background-image: url(';
-        echo get_template_directory_uri() . '/images/hero/hero-' . rand(1,6) .'.jpg);"></div>';
-    }
+    echo '<div class="hero-image" style="background-image: url(' . 
+    get_template_directory_uri() . '/images/hero/hero-' . rand(1,3) .'.jpg);"></div>';
 
 }
 
@@ -60,6 +54,12 @@ function featured_posts ($offset) {
 
 }
 
+
+function display_meta_box() {
+
+	echo nl2br( get_post_meta( get_the_ID(), 'custom_wysiwyg', true) );
+
+}
 
 
 ?>

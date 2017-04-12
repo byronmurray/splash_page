@@ -3,13 +3,16 @@
 		display: flex;
 		justify-content: space-between;
 
+		.feature-box {
+			flex-basis: 31%;
+		}		
 	}
 
-	.flex div {
-		flex-basis: 31%;
-	}
 }
 
+.hero-image {
+	height: 240px;
+}
 
 form {
 	margin: 20px 0 40px 0;
@@ -26,8 +29,6 @@ h2 > span {
 .padding {
 	padding: 40px;
 }
-
-
 
 
 /* footer */
