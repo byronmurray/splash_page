@@ -6,9 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="<?php echo get_template_directory_uri() ?>/css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="<?php echo get_template_directory_uri() ?>/css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="<?php echo get_template_directory_uri() ?>/css/landing-page-1f4cba.webflow.css" rel="stylesheet" type="text/css">
   <?php wp_head(); ?>
 </head>
 
