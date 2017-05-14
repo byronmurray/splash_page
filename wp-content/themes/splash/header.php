@@ -9,15 +9,6 @@
   <link href="<?php echo get_template_directory_uri() ?>/css/normalize.css" rel="stylesheet" type="text/css">
   <link href="<?php echo get_template_directory_uri() ?>/css/webflow.css" rel="stylesheet" type="text/css">
   <link href="<?php echo get_template_directory_uri() ?>/css/landing-page-1f4cba.webflow.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-  <script type="text/javascript">
-    WebFont.load({
-      google: {
-        families: ["PT Serif:400,400italic,700,700italic","Varela Round:400","Great Vibes:400"]
-      }
-    });
-  </script>
-  <script src="<?php echo get_template_directory_uri() ?>/js/modernizr.js" type="text/javascript"></script>
   <?php wp_head(); ?>
 </head>
 
